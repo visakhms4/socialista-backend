@@ -25,6 +25,7 @@ mongoose.connect(
 
 //middleware
 app.use((req, res, next) => {  
+  res.header("Access-Control-Allow-Origin", "*")
   res.header("Access-Control-Allow-Credentials", true); 
   next();
 });
